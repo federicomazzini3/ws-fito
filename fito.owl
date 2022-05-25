@@ -1,40 +1,13 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://www.semanticweb.org/fito#"
      xml:base="http://www.semanticweb.org/fito"
-     xmlns:fma="http://purl.obolibrary.org/obo/fma/releases/2020-04-13/fma.owl#"
+     xmlns:fma="http://purl.org/sig/ont/fma/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/fito"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Object Properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.semanticweb.org/fito#involves -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fito#involves">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/fito#isInvolvedIn"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/fito#Exercise"/>
-        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/fma/releases/2020-04-13/fma.owl#Muscle organ"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/fito#isInvolvedIn -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fito#isInvolvedIn"/>
     
 
 
@@ -49,17 +22,11 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/fma/releases/2020-04-13/fma.owl#Muscle organ -->
+    <!-- http://purl.org/sig/ont/fma/fma5022 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/fma/releases/2020-04-13/fma.owl#Muscle organ">
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma5022">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#DomainEntity"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#isInvolvedIn"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fito#Exercise"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/fito#Exercise"/>
+        <rdfs:label>Muscle</rdfs:label>
     </owl:Class>
     
 
@@ -68,6 +35,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/fito#AerobicExercise">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#Exercise"/>
+        <rdfs:label>Aerobic exercise</rdfs:label>
     </owl:Class>
     
 
@@ -76,6 +44,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/fito#AnaerobicExercise">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#Exercise"/>
+        <rdfs:label>Anaerobic exercise</rdfs:label>
     </owl:Class>
     
 
@@ -88,10 +57,30 @@
     
 
 
-    <!-- http://www.semanticweb.org/fito#ConSovraccarico -->
+    <!-- http://www.semanticweb.org/fito#BodyWeightExercise -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/fito#ConSovraccarico">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#Exercise"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/fito#BodyWeightExercise">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#ExerciseType"/>
+        <rdfs:comment>esercizi a corpo libero dove il corpo è utilizzato come peso, potrebbero essere usati degli equipment come le parallele o la sbarra</rdfs:comment>
+        <rdfs:label>Body weight exercise</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#CardioExercise -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fito#CardioExercise">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#ExerciseType"/>
+        <rdfs:label>Cardio exercise</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#CardioMachine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fito#CardioMachine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#Equipment"/>
+        <rdfs:label>Cardio machine</rdfs:label>
     </owl:Class>
     
 
@@ -100,14 +89,6 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/fito#ConcentricPhase">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#Phase"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/fito#CorpoLibero -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/fito#CorpoLibero">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#Exercise"/>
     </owl:Class>
     
 
@@ -134,16 +115,58 @@
     
 
 
+    <!-- http://www.semanticweb.org/fito#Endurance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fito#Endurance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#ExerciseGoal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#EnduranceImprovement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fito#EnduranceImprovement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#PerformanceImprovement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#Equipment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fito#Equipment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#DomainEntity"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/fito#Exercise -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/fito#Exercise">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#DomainEntity"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#involves"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/fma/releases/2020-04-13/fma.owl#Muscle organ"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#ExerciseGoal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fito#ExerciseGoal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#DomainEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#ExerciseType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fito#ExerciseType">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#DomainEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#Flexibility -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fito#Flexibility">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#ExerciseGoal"/>
     </owl:Class>
     
 
@@ -152,6 +175,26 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/fito#FlexibilityExercise">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#Exercise"/>
+        <rdfs:label>Flexibility exercise</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#FreeWeight -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fito#FreeWeight">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#Equipment"/>
+        <rdfs:label>Free weight</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#FreeWeightExercise -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fito#FreeWeightExercise">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#OverloadWeightExercise"/>
+        <rdfs:comment>nei free weight ricadono quegli esercizi che sono fatti con pesi liberi (manubri, bilancieri, ecc), gli esercizi con elastici (non tutti, solo quelli tipo curl con elastici e gli esercizi a corpo libero con sovraccarico (dip/trazioni con sovraccarico)</rdfs:comment>
+        <rdfs:label>Free weight exercise</rdfs:label>
     </owl:Class>
     
 
@@ -159,7 +202,7 @@
     <!-- http://www.semanticweb.org/fito#Hypertrophy -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/fito#Hypertrophy">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#TypeOfWorkout"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#ExerciseGoal"/>
     </owl:Class>
     
 
@@ -188,10 +231,21 @@
     
 
 
+    <!-- http://www.semanticweb.org/fito#MachineWeightExercise -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fito#MachineWeightExercise">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#OverloadWeightExercise"/>
+        <rdfs:comment>esercizi con macchinari (anche quelli con i cavi)</rdfs:comment>
+        <rdfs:label>Machine weight exercise</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/fito#MobilityExercise -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/fito#MobilityExercise">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#Exercise"/>
+        <rdfs:label>Mobility exercise</rdfs:label>
     </owl:Class>
     
 
@@ -200,6 +254,41 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/fito#MuscleContraction">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#DomainEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#MuscleDefinition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fito#MuscleDefinition">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#WeightLoss"/>
+        <rdfs:label>Muscle definition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#MuscleGrowth -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fito#MuscleGrowth">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#WeightGain"/>
+        <rdfs:label>Muscle growth</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#OverloadWeightExercise -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fito#OverloadWeightExercise">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#ExerciseType"/>
+        <rdfs:label>Overload weight exercise</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#PerformanceImprovement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fito#PerformanceImprovement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#WorkoutGoal"/>
     </owl:Class>
     
 
@@ -220,6 +309,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/fito#PowerImprovement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fito#PowerImprovement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#PerformanceImprovement"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/fito#StaticMuscleContraction -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/fito#StaticMuscleContraction">
@@ -231,15 +328,42 @@
     <!-- http://www.semanticweb.org/fito#Strength -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/fito#Strength">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#TypeOfWorkout"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#ExerciseGoal"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/fito#TypeOfWorkout -->
+    <!-- http://www.semanticweb.org/fito#StrengthImprovement -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/fito#TypeOfWorkout">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#DomainEntity"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/fito#StrengthImprovement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#PerformanceImprovement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#WeightGain -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fito#WeightGain">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#WorkoutGoal"/>
+        <rdfs:label>Weight gain</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#WeightLoss -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fito#WeightLoss">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#WorkoutGoal"/>
+        <rdfs:label>Weight loss</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#WeightMachine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fito#WeightMachine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#Equipment"/>
+        <rdfs:label>Weight machine</rdfs:label>
     </owl:Class>
     
 
@@ -247,6 +371,22 @@
     <!-- http://www.semanticweb.org/fito#Workout -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/fito#Workout">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#DomainEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#WorkoutGoal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fito#WorkoutGoal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#DomainEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#WorkoutPlan -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fito#WorkoutPlan">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#DomainEntity"/>
     </owl:Class>
 </rdf:RDF>
