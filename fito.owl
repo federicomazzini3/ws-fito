@@ -42,6 +42,105 @@
     
 
 
+    <!-- http://purl.org/sig/ont/fma/fma13357 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma13357">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma5022"/>
+        <rdfs:label>Lats</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma20278 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma20278">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma9620"/>
+        <rdfs:label>Obliques</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma22424 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma22424">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma5022"/>
+        <rdfs:label>Quadricep</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma22427 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma22427">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma5022"/>
+        <rdfs:label>Hamstring</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma22439 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma22439">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma5022"/>
+        <rdfs:label>Adductor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma22474 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma22474">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma5022"/>
+        <rdfs:label>Calve</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma32521 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma32521">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma5022"/>
+        <rdfs:label>Deltoid</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma32546 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma32546">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma5022"/>
+        <rdfs:label>Infraspinatus</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma37349 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma37349">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma5022"/>
+        <rdfs:label>Chest</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma37670 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma37670">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma5022"/>
+        <rdfs:label>Bicep</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma37688 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma37688">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma5022"/>
+        <rdfs:label>Tricep</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/sig/ont/fma/fma5022 -->
 
     <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma5022">
@@ -51,18 +150,29 @@
     
 
 
-    <!-- http://www.semanticweb.org/fito#Abductor -->
+    <!-- http://purl.org/sig/ont/fma/fma64922 -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/fito#Abductor">
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma64922">
         <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma5022"/>
+        <rdfs:label>Glute</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/fito#Abs -->
+    <!-- http://purl.org/sig/ont/fma/fma9620 -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/fito#Abs">
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma9620">
         <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma5022"/>
+        <rdfs:label>Abs</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma9626 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma9626">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma5022"/>
+        <rdfs:label>Trapezius</rdfs:label>
     </owl:Class>
     
 
@@ -94,28 +204,12 @@
     
 
 
-    <!-- http://www.semanticweb.org/fito#Bicep -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/fito#Bicep">
-        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma5022"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/fito#BodyWeightExercise -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/fito#BodyWeightExercise">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#ExerciseType"/>
         <rdfs:comment>esercizi a corpo libero dove il corpo è utilizzato come peso, potrebbero essere usati degli equipment come le parallele o la sbarra</rdfs:comment>
         <rdfs:label>Body weight exercise</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/fito#Calve -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/fito#Calve">
-        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma5022"/>
     </owl:Class>
     
 
@@ -138,26 +232,10 @@
     
 
 
-    <!-- http://www.semanticweb.org/fito#Chest -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/fito#Chest">
-        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma5022"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/fito#ConcentricPhase -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/fito#ConcentricPhase">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#Phase"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/fito#Deltoid -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/fito#Deltoid">
-        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma5022"/>
     </owl:Class>
     
 
@@ -307,34 +385,10 @@
     
 
 
-    <!-- http://www.semanticweb.org/fito#Glute -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/fito#Glute">
-        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma5022"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/fito#Hamstring -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/fito#Hamstring">
-        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma5022"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/fito#Hypertrophy -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/fito#Hypertrophy">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#ExerciseGoal"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/fito#Infraspinatus -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/fito#Infraspinatus">
-        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma5022"/>
     </owl:Class>
     
 
@@ -359,14 +413,6 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/fito#Isotonic">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#DynamicMuscleContraction"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/fito#Lats -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/fito#Lats">
-        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma5022"/>
     </owl:Class>
     
 
@@ -412,14 +458,6 @@
     <owl:Class rdf:about="http://www.semanticweb.org/fito#MuscleGrowth">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#WeightGain"/>
         <rdfs:label>Muscle growth</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/fito#Obliques -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/fito#Obliques">
-        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma5022"/>
     </owl:Class>
     
 
@@ -482,22 +520,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/fito#Quadricep -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/fito#Quadricep">
-        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma5022"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/fito#Shin -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/fito#Shin">
-        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma5022"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/fito#StaticMuscleContraction -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/fito#StaticMuscleContraction">
@@ -518,22 +540,6 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/fito#StrengthImprovement">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#PerformanceImprovement"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/fito#Trapezius -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/fito#Trapezius">
-        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma5022"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/fito#Tricep -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/fito#Tricep">
-        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma5022"/>
     </owl:Class>
     
 
@@ -627,26 +633,6 @@
             <rdf:Description rdf:about="http://www.semanticweb.org/fito#Workout"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/fito#WorkoutGoal"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/fito#WorkoutPlan"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/fito#Abductor"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/fito#Abs"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/fito#Bicep"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/fito#Calve"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/fito#Chest"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/fito#Deltoid"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/fito#Glute"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/fito#Hamstring"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/fito#Infraspinatus"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/fito#Lats"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/fito#Obliques"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/fito#Quadricep"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/fito#Shin"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/fito#Trapezius"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/fito#Tricep"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
