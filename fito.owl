@@ -42,6 +42,15 @@
     
 
 
+    <!-- http://purl.org/sig/ont/fma/fma13335 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma13335">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma20278"/>
+        <rdfs:label>Obliques</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/sig/ont/fma/fma13357 -->
 
     <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma13357">
@@ -54,8 +63,8 @@
     <!-- http://purl.org/sig/ont/fma/fma20278 -->
 
     <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma20278">
-        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma9620"/>
-        <rdfs:label>Obliques</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma5022"/>
+        <rdfs:label>Abs</rdfs:label>
     </owl:Class>
     
 
@@ -159,20 +168,20 @@
     
 
 
-    <!-- http://purl.org/sig/ont/fma/fma9620 -->
-
-    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma9620">
-        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma5022"/>
-        <rdfs:label>Abs</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.org/sig/ont/fma/fma9626 -->
 
     <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma9626">
         <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma5022"/>
         <rdfs:label>Trapezius</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma9628 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma9628">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma20278"/>
+        <rdfs:label>Central Abs</rdfs:label>
     </owl:Class>
     
 
