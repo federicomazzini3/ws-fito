@@ -86,13 +86,20 @@
     
 
 
-    <!-- http://www.semanticweb.org/fito#hasExerciseGoal -->
+    <!-- http://www.semanticweb.org/fito#develops -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fito#hasExerciseGoal">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/fito#hasGoal"/>
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/fito#reachedWithExercise"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/fito#Exercise"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/fito#ExerciseGoal"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fito#develops">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/fito#trains"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/fito#isDevelopedBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#hasAttachment -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fito#hasAttachment">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fito#CableWeightMachine"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fito#Attachment"/>
     </owl:ObjectProperty>
     
 
@@ -109,14 +116,6 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/fito#ExerciseGoal"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/fito#WorkoutGoal"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -128,6 +127,24 @@
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/fito#reachedWithPlan"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/fito#WorkoutPlan"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/fito#WorkoutGoal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#increaseResistanceOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fito#increaseResistanceOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/fito#trains"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/fito#isMadeMoreResistantBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#increaseStrengthOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fito#increaseStrengthOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/fito#trains"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/fito#isStrengthenedBy"/>
     </owl:ObjectProperty>
     
 
@@ -146,6 +163,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/fito#isDevelopedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fito#isDevelopedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/fito#isTrainedBy"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/fito#isDoneWith -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fito#isDoneWith"/>
@@ -160,6 +185,14 @@
             <rdf:Description rdf:about="http://www.semanticweb.org/fito#isTrainedBy"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/fito#isDoneWith"/>
         </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#isMadeMoreResistantBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fito#isMadeMoreResistantBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/fito#isTrainedBy"/>
     </owl:ObjectProperty>
     
 
@@ -192,10 +225,36 @@
     
 
 
+    <!-- http://www.semanticweb.org/fito#isStrengthenedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fito#isStrengthenedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/fito#isTrainedBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#isStretchedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fito#isStretchedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/fito#isTrainedBy"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/fito#stretches"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/fito#isTrainedBy -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fito#isTrainedBy">
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/fito#trains"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#isWarmedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fito#isWarmedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/fito#isTrainedBy"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/fito#warms"/>
     </owl:ObjectProperty>
     
 
@@ -205,16 +264,6 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fito#reachedWith">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:comment>Goal è raggiunto con un Esercizio</rdfs:comment>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/fito#reachedWithExercise -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fito#reachedWithExercise">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/fito#reachedWith"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/fito#ExerciseGoal"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/fito#Exercise"/>
     </owl:ObjectProperty>
     
 
@@ -229,12 +278,28 @@
     
 
 
+    <!-- http://www.semanticweb.org/fito#stretches -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fito#stretches">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/fito#trains"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/fito#trains -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fito#trains">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/fito#Exercise"/>
         <rdfs:range rdf:resource="http://purl.org/sig/ont/fma/fma5022"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#warms -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fito#warms">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/fito#trains"/>
     </owl:ObjectProperty>
     
 
@@ -247,6 +312,15 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://www.semanticweb.org/fito#hasDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fito#hasDescription">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fito#Exercise"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
     
 
 
@@ -470,6 +544,12 @@
     <!-- http://www.semanticweb.org/fito#AerobicExercise -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/fito#AerobicExercise">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#increaseResistanceOf"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sig/ont/fma/fma5022"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#Exercise"/>
         <owl:disjointWith rdf:resource="http://www.semanticweb.org/fito#AnaerobicExercise"/>
         <rdfs:label>Aerobic exercise</rdfs:label>
@@ -480,6 +560,18 @@
     <!-- http://www.semanticweb.org/fito#AnaerobicExercise -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/fito#AnaerobicExercise">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#develops"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sig/ont/fma/fma5022"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#increaseStrengthOf"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sig/ont/fma/fma5022"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#Exercise"/>
         <rdfs:label>Anaerobic exercise</rdfs:label>
     </owl:Class>
@@ -515,6 +607,12 @@
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#trains"/>
+                <owl:hasValue rdf:resource="http://www.wikidata.org/wiki/Q130243"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -685,6 +783,26 @@
     
 
 
+    <!-- http://www.semanticweb.org/fito#BenchDips -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fito#BenchDips">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#Dips"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#isDoneWith"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/fito#Bench"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#trains"/>
+                <owl:hasValue rdf:resource="https://www.wikidata.org/wiki/Q83379"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/fito#BenchPress -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/fito#BenchPress">
@@ -693,6 +811,18 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#isDoneWith"/>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fito#Bench"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#trains"/>
+                <owl:hasValue rdf:resource="http://www.wikidata.org/wiki/Q660627"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#trains"/>
+                <owl:hasValue rdf:resource="https://www.wikidata.org/wiki/Q83379"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -709,6 +839,30 @@
                 <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/fito#Cyclette"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#trains"/>
+                <owl:hasValue rdf:resource="http://www.wikidata.org/wiki/Q3216080"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#trains"/>
+                <owl:hasValue rdf:resource="https://www.wikidata.org/wiki/Q196002"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#trains"/>
+                <owl:hasValue rdf:resource="https://www.wikidata.org/wiki/Q504536"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#trains"/>
+                <owl:hasValue rdf:resource="https://www.wikidata.org/wiki/Q637545"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -716,7 +870,36 @@
     <!-- http://www.semanticweb.org/fito#BodyWeightExercise -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/fito#BodyWeightExercise">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/fito#Exercise"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#isDoneWith"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/fito#Support"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#Exercise"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#develops"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.org/sig/ont/fma/fma5022"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#increaseResistanceOf"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.org/sig/ont/fma/fma5022"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#increaseStrengthOf"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.org/sig/ont/fma/fma5022"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
         <rdfs:comment>esercizi a corpo libero dove il corpo è utilizzato come peso, potrebbero essere usati degli equipment come le parallele o la sbarra</rdfs:comment>
         <rdfs:label>Body weight exercise</rdfs:label>
     </owl:Class>
@@ -731,10 +914,30 @@
     
 
 
+    <!-- http://www.semanticweb.org/fito#CableChestFly -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fito#CableChestFly">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#ChestFly"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#isDoneWith"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fito#MultiCableMachine"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/fito#CableWeightMachine -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/fito#CableWeightMachine">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#WeightMachine"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#hasAttachment"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/fito#Attachment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -742,24 +945,18 @@
     <!-- http://www.semanticweb.org/fito#CardioExercise -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/fito#CardioExercise">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#Exercise"/>
-        <rdfs:subClassOf>
+        <owl:equivalentClass>
             <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/fito#Exercise"/>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/fito#AerobicExercise"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#isDoneWith"/>
                         <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fito#CardioMachine"/>
                     </owl:Restriction>
-                </owl:intersectionOf>
+                </owl:unionOf>
             </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#hasExerciseGoal"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fito#Endurance"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#Exercise"/>
         <rdfs:label>Cardio exercise</rdfs:label>
     </owl:Class>
     
@@ -777,11 +974,30 @@
     <!-- http://www.semanticweb.org/fito#ChestFly -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/fito#ChestFly">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#FreeWeightExercise"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#Exercise"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#isDoneWith"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fito#Dumbbell"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/fito#Dumbbell"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/fito#MultiCableMachine"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#trains"/>
+                <owl:hasValue rdf:resource="http://www.wikidata.org/wiki/Q130243"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#trains"/>
+                <owl:hasValue rdf:resource="http://www.wikidata.org/wiki/Q660627"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -842,6 +1058,12 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/fito#Curl">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#FreeWeightExercise"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#trains"/>
+                <owl:hasValue rdf:resource="http://www.wikidata.org/wiki/Q601016"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -872,6 +1094,42 @@
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fito#OlympicBarbell"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#trains"/>
+                <owl:hasValue rdf:resource="http://www.wikidata.org/wiki/Q283673"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#trains"/>
+                <owl:hasValue rdf:resource="https://www.wikidata.org/wiki/Q19087"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#trains"/>
+                <owl:hasValue rdf:resource="https://www.wikidata.org/wiki/Q196002"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#trains"/>
+                <owl:hasValue rdf:resource="https://www.wikidata.org/wiki/Q204113"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#trains"/>
+                <owl:hasValue rdf:resource="https://www.wikidata.org/wiki/Q504536"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#trains"/>
+                <owl:hasValue rdf:resource="https://www.wikidata.org/wiki/Q637545"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -880,6 +1138,14 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/fito#DipBar">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#Support"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#Dips -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fito#Dips">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#Exercise"/>
     </owl:Class>
     
 
@@ -914,6 +1180,20 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#isDoneWith"/>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fito#Dumbbell"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#DumbbellChestFly -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fito#DumbbellChestFly">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#ChestFly"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#isDoneWith"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/fito#Dumbbell"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -959,6 +1239,20 @@
     
 
 
+    <!-- http://www.semanticweb.org/fito#DumbbellsExercise -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fito#DumbbellsExercise">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#isDoneWith"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fito#Dumbbell"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#FreeWeightExercise"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/fito#DumbbellsRower -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/fito#DumbbellsRower">
@@ -988,20 +1282,6 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#FrenchPress"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/fito#DumbellsExercise -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/fito#DumbellsExercise">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#isDoneWith"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fito#Dumbbell"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#FreeWeightExercise"/>
     </owl:Class>
     
 
@@ -1072,14 +1352,24 @@
                 <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/fito#Elliptical"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/fito#Endurance -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/fito#Endurance">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#ExerciseGoal"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#trains"/>
+                <owl:hasValue rdf:resource="https://www.wikidata.org/wiki/Q196002"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#trains"/>
+                <owl:hasValue rdf:resource="https://www.wikidata.org/wiki/Q504536"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#trains"/>
+                <owl:hasValue rdf:resource="https://www.wikidata.org/wiki/Q83379"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1103,43 +1393,7 @@
     <!-- http://www.semanticweb.org/fito#Exercise -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/fito#Exercise">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/fito#AerobicExercise"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/fito#AnaerobicExercise"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/fito#FlexibilityExercise"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/fito#MobilityExercise"/>
-                </owl:unionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#DomainEntity"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/fito#ExerciseGoal -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/fito#ExerciseGoal">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#DomainEntity"/>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/fito#Endurance"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/fito#Flexibility"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/fito#Hypertrophy"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/fito#Strength"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/fito#Flexibility -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/fito#Flexibility">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#ExerciseGoal"/>
     </owl:Class>
     
 
@@ -1147,8 +1401,76 @@
     <!-- http://www.semanticweb.org/fito#FlexibilityExercise -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/fito#FlexibilityExercise">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#stretches"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sig/ont/fma/fma5022"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#Exercise"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#stretches"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/sig/ont/fma/fma5022"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label>Flexibility exercise</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#FreeParallelDips -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fito#FreeParallelDips">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#ParallelDips"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#isDoneWith"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/fito#DipBar"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#FreePullUps -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fito#FreePullUps">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#PullUps"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#isDoneWith"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/fito#PullUpBar"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#FreePushUps -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fito#FreePushUps">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#PushUps"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#isDoneWith"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/fito#Bench"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#FreeVBarDips -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fito#FreeVBarDips">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#VBarDips"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#isDoneWith"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/fito#DipBar"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1166,30 +1488,12 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/fito#FreeWeightExercise">
         <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/fito#OverloadWeightExercise"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#isDoneWith"/>
-                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fito#FreeWeight"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#isDoneWith"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fito#FreeWeight"/>
+            </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#OverloadWeightExercise"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#hasExerciseGoal"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.semanticweb.org/fito#Hypertrophy"/>
-                            <rdf:Description rdf:about="http://www.semanticweb.org/fito#Strength"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment>nei free weight ricadono quegli esercizi che sono fatti con pesi liberi (manubri, bilancieri, ecc), gli esercizi con elastici (non tutti, solo quelli tipo curl con elastici e gli esercizi a corpo libero con sovraccarico (dip/trazioni con sovraccarico)</rdfs:comment>
         <rdfs:label>Free weight exercise</rdfs:label>
     </owl:Class>
@@ -1214,6 +1518,18 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/fito#FrontRaise">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#FreeWeightExercise"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#trains"/>
+                <owl:hasValue rdf:resource="http://www.wikidata.org/wiki/Q130243"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#trains"/>
+                <owl:hasValue rdf:resource="https://www.wikidata.org/wiki/Q83379"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1229,6 +1545,28 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://www.semanticweb.org/fito#SpiderCurl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#HighCableChestFly -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fito#HighCableChestFly">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#CableChestFly"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#isDoneWith"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fito#HighCableMachine"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#HighCableMachine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fito#HighCableMachine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#MultiCableMachine"/>
     </owl:Class>
     
 
@@ -1267,28 +1605,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#trains"/>
                 <owl:hasValue rdf:resource="http://www.wikidata.org/wiki/Q66572230"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/fito#Hypertrophy -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/fito#Hypertrophy">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#ExerciseGoal"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#reachedWithExercise"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.semanticweb.org/fito#AnaerobicExercise"/>
-                            <rdf:Description rdf:about="http://www.semanticweb.org/fito#BodyWeightExercise"/>
-                            <rdf:Description rdf:about="http://www.semanticweb.org/fito#OverloadWeightExercise"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1479,34 +1795,52 @@
     
 
 
+    <!-- http://www.semanticweb.org/fito#LowCableChestFly -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fito#LowCableChestFly">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#CableChestFly"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#isDoneWith"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fito#LowCableMachine"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#LowCableMachine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fito#LowCableMachine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#MultiCableMachine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#LowToHighChestFly -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fito#LowToHighChestFly">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#CableChestFly"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#isDoneWith"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fito#LowCableMachine"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/fito#MachineWeightExercise -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/fito#MachineWeightExercise">
         <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/fito#OverloadWeightExercise"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#isDoneWith"/>
-                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fito#WeightMachine"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#isDoneWith"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fito#WeightMachine"/>
+            </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#OverloadWeightExercise"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#hasExerciseGoal"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.semanticweb.org/fito#Hypertrophy"/>
-                            <rdf:Description rdf:about="http://www.semanticweb.org/fito#Strength"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment>esercizi con macchinari (anche quelli con i cavi)</rdfs:comment>
         <rdfs:label>Machine weight exercise</rdfs:label>
     </owl:Class>
@@ -1523,6 +1857,12 @@
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fito#OlympicBarbell"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#trains"/>
+                <owl:hasValue rdf:resource="http://www.wikidata.org/wiki/Q130243"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1530,6 +1870,12 @@
     <!-- http://www.semanticweb.org/fito#MobilityExercise -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/fito#MobilityExercise">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#warms"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sig/ont/fma/fma5022"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#Exercise"/>
         <rdfs:label>Mobility exercise</rdfs:label>
     </owl:Class>
@@ -1578,29 +1924,114 @@
     
 
 
+    <!-- http://www.semanticweb.org/fito#OverloadParallelDips -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fito#OverloadParallelDips">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#ParallelDips"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#isDoneWith"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fito#FreeWeight"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#OverloadPullUps -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fito#OverloadPullUps">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#PullUps"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#isDoneWith"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fito#FreeWeight"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#OverloadPushUps -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fito#OverloadPushUps">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#PushUps"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#isDoneWith"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fito#FreeWeight"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#OverloadVBarDips -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fito#OverloadVBarDips">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#VBarDips"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#isDoneWith"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fito#FreeWeight"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/fito#OverloadWeightExercise -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/fito#OverloadWeightExercise">
         <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/fito#Exercise"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#isDoneWith"/>
-                        <owl:someValuesFrom>
-                            <owl:Class>
-                                <owl:unionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://www.semanticweb.org/fito#FreeWeight"/>
-                                    <rdf:Description rdf:about="http://www.semanticweb.org/fito#WeightMachine"/>
-                                </owl:unionOf>
-                            </owl:Class>
-                        </owl:someValuesFrom>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#isDoneWith"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/fito#FreeWeight"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/fito#WeightMachine"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#Exercise"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#develops"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.org/sig/ont/fma/fma5022"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#increaseStrengthOf"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.org/sig/ont/fma/fma5022"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
         <rdfs:label>Overload weight exercise</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#ParallelDips -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fito#ParallelDips">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#Dips"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#isDoneWith"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fito#DipBar"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#trains"/>
+                <owl:hasValue rdf:resource="https://www.wikidata.org/wiki/Q83379"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1674,6 +2105,77 @@
     
 
 
+    <!-- http://www.semanticweb.org/fito#PullUps -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fito#PullUps">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#Exercise"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#isDoneWith"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/fito#PullUpBar"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/fito#Rack"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#trains"/>
+                <owl:hasValue rdf:resource="http://www.wikidata.org/wiki/Q283673"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#trains"/>
+                <owl:hasValue rdf:resource="http://www.wikidata.org/wiki/Q601016"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#trains"/>
+                <owl:hasValue rdf:resource="https://www.wikidata.org/wiki/Q19087"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#trains"/>
+                <owl:hasValue rdf:resource="https://www.wikidata.org/wiki/Q204113"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#PushUps -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fito#PushUps">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#Exercise"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#isDoneWith"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fito#Bench"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#trains"/>
+                <owl:hasValue rdf:resource="http://www.wikidata.org/wiki/Q660627"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#trains"/>
+                <owl:hasValue rdf:resource="https://www.wikidata.org/wiki/Q83379"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/fito#Rack -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/fito#Rack">
@@ -1740,6 +2242,30 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/fito#Rower">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#FreeWeightExercise"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#trains"/>
+                <owl:hasValue rdf:resource="http://www.wikidata.org/wiki/Q130243"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#trains"/>
+                <owl:hasValue rdf:resource="http://www.wikidata.org/wiki/Q283673"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#trains"/>
+                <owl:hasValue rdf:resource="http://www.wikidata.org/wiki/Q660627"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#trains"/>
+                <owl:hasValue rdf:resource="https://www.wikidata.org/wiki/Q19087"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1752,6 +2278,42 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#isDoneWith"/>
                 <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/fito#RowingMachine"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#trains"/>
+                <owl:hasValue rdf:resource="http://www.wikidata.org/wiki/Q283673"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#trains"/>
+                <owl:hasValue rdf:resource="http://www.wikidata.org/wiki/Q601016"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#trains"/>
+                <owl:hasValue rdf:resource="https://www.wikidata.org/wiki/Q196002"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#trains"/>
+                <owl:hasValue rdf:resource="https://www.wikidata.org/wiki/Q275150"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#trains"/>
+                <owl:hasValue rdf:resource="https://www.wikidata.org/wiki/Q504536"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#trains"/>
+                <owl:hasValue rdf:resource="https://www.wikidata.org/wiki/Q637545"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1776,6 +2338,24 @@
                 <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/fito#Treadmill"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#trains"/>
+                <owl:hasValue rdf:resource="http://www.wikidata.org/wiki/Q3216080"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#trains"/>
+                <owl:hasValue rdf:resource="https://www.wikidata.org/wiki/Q196002"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#trains"/>
+                <owl:hasValue rdf:resource="https://www.wikidata.org/wiki/Q504536"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1796,6 +2376,24 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#isDoneWith"/>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fito#Dumbbell"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#trains"/>
+                <owl:hasValue rdf:resource="http://www.wikidata.org/wiki/Q130243"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#trains"/>
+                <owl:hasValue rdf:resource="https://www.wikidata.org/wiki/Q19087"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#trains"/>
+                <owl:hasValue rdf:resource="https://www.wikidata.org/wiki/Q204113"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1870,6 +2468,24 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/fito#Squat">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#FreeWeightExercise"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#trains"/>
+                <owl:hasValue rdf:resource="https://www.wikidata.org/wiki/Q196002"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#trains"/>
+                <owl:hasValue rdf:resource="https://www.wikidata.org/wiki/Q504536"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#trains"/>
+                <owl:hasValue rdf:resource="https://www.wikidata.org/wiki/Q637545"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1904,28 +2520,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/fito#Strength -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/fito#Strength">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#ExerciseGoal"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#reachedWithExercise"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.semanticweb.org/fito#AnaerobicExercise"/>
-                            <rdf:Description rdf:about="http://www.semanticweb.org/fito#BodyWeightExercise"/>
-                            <rdf:Description rdf:about="http://www.semanticweb.org/fito#OverloadWeightExercise"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/fito#StrengthImprovement -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/fito#StrengthImprovement">
@@ -1954,6 +2548,26 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/fito#VBar">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#Attachment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#VBarDips -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fito#VBarDips">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#Dips"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#isDoneWith"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fito#DipBar"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#trains"/>
+                <owl:hasValue rdf:resource="http://www.wikidata.org/wiki/Q660627"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -2060,6 +2674,30 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#FrenchPress"/>
         <isDoneWith rdf:resource="http://www.semanticweb.org/fito#Dumbell5kg"/>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#es_stretching_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#es_stretching_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fito#FlexibilityExercise"/>
+        <trains rdf:resource="https://www.wikidata.org/wiki/Q19087"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#lat_exercise -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#lat_exercise">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fito#LatMachine_Exercise"/>
+        <isDoneWith rdf:resource="http://www.semanticweb.org/fito#latmachine"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#latmachine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#latmachine"/>
     
 
 
@@ -2191,9 +2829,11 @@
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/fito#BodyWeightExercise"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/fito#CardioExercise"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/fito#OverloadWeightExercise"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fito#Attachment"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fito#CardioMachine"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fito#FreeWeight"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fito#Support"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fito#WeightMachine"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
@@ -2239,22 +2879,6 @@
             <rdf:Description rdf:about="http://www.semanticweb.org/fito#OlympicBarbell"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/fito#SafetySquatBarbell"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/fito#WeightDisk"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/fito#Endurance"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/fito#Flexibility"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/fito#Hypertrophy"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/fito#Endurance"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/fito#Flexibility"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/fito#Strength"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
