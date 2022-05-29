@@ -90,7 +90,15 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fito#develops">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/fito#trains"/>
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/fito#isDevelopedBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#grewWith -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fito#grewWith">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/fito#isDevelopedBy"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/fito#increaseGrowthOf"/>
     </owl:ObjectProperty>
     
 
@@ -120,6 +128,15 @@
     
 
 
+    <!-- http://www.semanticweb.org/fito#hasMuscleContraction -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fito#hasMuscleContraction">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fito#Exercise"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fito#MuscleContraction"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/fito#hasPlanGoal -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fito#hasPlanGoal">
@@ -131,11 +148,19 @@
     
 
 
+    <!-- http://www.semanticweb.org/fito#increaseGrowthOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fito#increaseGrowthOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/fito#develops"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/fito#increaseResistanceOf -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fito#increaseResistanceOf">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/fito#trains"/>
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/fito#isMadeMoreResistantBy"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/fito#isMadeMoreResistantWith"/>
     </owl:ObjectProperty>
     
 
@@ -143,8 +168,8 @@
     <!-- http://www.semanticweb.org/fito#increaseStrengthOf -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fito#increaseStrengthOf">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/fito#trains"/>
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/fito#isStrengthenedBy"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/fito#develops"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/fito#isStrengthenedWith"/>
     </owl:ObjectProperty>
     
 
@@ -189,9 +214,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/fito#isMadeMoreResistantBy -->
+    <!-- http://www.semanticweb.org/fito#isMadeMoreResistantWith -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fito#isMadeMoreResistantBy">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fito#isMadeMoreResistantWith">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/fito#isTrainedBy"/>
     </owl:ObjectProperty>
     
@@ -225,17 +250,17 @@
     
 
 
-    <!-- http://www.semanticweb.org/fito#isStrengthenedBy -->
+    <!-- http://www.semanticweb.org/fito#isStrengthenedWith -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fito#isStrengthenedBy">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/fito#isTrainedBy"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fito#isStrengthenedWith">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/fito#isDevelopedBy"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/fito#isStretchedBy -->
+    <!-- http://www.semanticweb.org/fito#isStretchedWith -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fito#isStretchedBy">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fito#isStretchedWith">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/fito#isTrainedBy"/>
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/fito#stretches"/>
     </owl:ObjectProperty>
@@ -250,9 +275,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/fito#isWarmedBy -->
+    <!-- http://www.semanticweb.org/fito#isWarmedWith -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fito#isWarmedBy">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fito#isWarmedWith">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/fito#isTrainedBy"/>
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/fito#warms"/>
     </owl:ObjectProperty>
@@ -550,6 +575,12 @@
                 <owl:someValuesFrom rdf:resource="http://purl.org/sig/ont/fma/fma5022"/>
             </owl:Restriction>
         </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#warms"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sig/ont/fma/fma5022"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#Exercise"/>
         <owl:disjointWith rdf:resource="http://www.semanticweb.org/fito#AnaerobicExercise"/>
         <rdfs:label>Aerobic exercise</rdfs:label>
@@ -562,13 +593,19 @@
     <owl:Class rdf:about="http://www.semanticweb.org/fito#AnaerobicExercise">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#develops"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#increaseGrowthOf"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/sig/ont/fma/fma5022"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#increaseStrengthOf"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sig/ont/fma/fma5022"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#stretches"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/sig/ont/fma/fma5022"/>
             </owl:Restriction>
         </owl:equivalentClass>
@@ -886,7 +923,7 @@
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#develops"/>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#increaseGrowthOf"/>
                         <owl:someValuesFrom rdf:resource="http://purl.org/sig/ont/fma/fma5022"/>
                     </owl:Restriction>
                     <owl:Restriction>
@@ -957,6 +994,20 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#Exercise"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#increaseResistanceOf"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.org/sig/ont/fma/fma5022"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#warms"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.org/sig/ont/fma/fma5022"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
         <rdfs:label>Cardio exercise</rdfs:label>
     </owl:Class>
     
@@ -1015,13 +1066,13 @@
     <!-- http://www.semanticweb.org/fito#ChestPress_Exercise -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/fito#ChestPress_Exercise">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#MachineWeightExercise"/>
-        <rdfs:subClassOf>
+        <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#isDoneWith"/>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fito#ChestPressMachine"/>
             </owl:Restriction>
-        </rdfs:subClassOf>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#MachineWeightExercise"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#trains"/>
@@ -1042,14 +1093,6 @@
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fito#Dumbbell"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/fito#ConcentricPhase -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/fito#ConcentricPhase">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#Isotonic"/>
     </owl:Class>
     
 
@@ -1322,14 +1365,6 @@
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fito#EZBarbell"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/fito#EccentricPhase -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/fito#EccentricPhase">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#Isotonic"/>
     </owl:Class>
     
 
@@ -1668,13 +1703,13 @@
     <!-- http://www.semanticweb.org/fito#LatMachine_Exercise -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/fito#LatMachine_Exercise">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#MachineWeightExercise"/>
-        <rdfs:subClassOf>
+        <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#isDoneWith"/>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fito#LatMachine"/>
             </owl:Restriction>
-        </rdfs:subClassOf>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#MachineWeightExercise"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#trains"/>
@@ -1716,13 +1751,13 @@
     <!-- http://www.semanticweb.org/fito#LegCurl_Exercise -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/fito#LegCurl_Exercise">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#MachineWeightExercise"/>
-        <rdfs:subClassOf>
+        <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#isDoneWith"/>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fito#LegCurlMachine"/>
             </owl:Restriction>
-        </rdfs:subClassOf>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#MachineWeightExercise"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#trains"/>
@@ -1744,13 +1779,13 @@
     <!-- http://www.semanticweb.org/fito#LegExtension_Exercise -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/fito#LegExtension_Exercise">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#MachineWeightExercise"/>
-        <rdfs:subClassOf>
+        <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#isDoneWith"/>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fito#LegExtensionMachine"/>
             </owl:Restriction>
-        </rdfs:subClassOf>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#MachineWeightExercise"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#trains"/>
@@ -1772,13 +1807,13 @@
     <!-- http://www.semanticweb.org/fito#LegPress_Exercise -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/fito#LegPress_Exercise">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#MachineWeightExercise"/>
-        <rdfs:subClassOf>
+        <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#isDoneWith"/>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fito#LegPressMachine"/>
             </owl:Restriction>
-        </rdfs:subClassOf>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#MachineWeightExercise"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#trains"/>
@@ -2001,7 +2036,7 @@
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#develops"/>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#increaseGrowthOf"/>
                         <owl:someValuesFrom rdf:resource="http://purl.org/sig/ont/fma/fma5022"/>
                     </owl:Restriction>
                     <owl:Restriction>
@@ -2047,13 +2082,13 @@
     <!-- http://www.semanticweb.org/fito#Pectoral_Exercise -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/fito#Pectoral_Exercise">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#MachineWeightExercise"/>
-        <rdfs:subClassOf>
+        <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#isDoneWith"/>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fito#PectoralMachine"/>
             </owl:Restriction>
-        </rdfs:subClassOf>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#MachineWeightExercise"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#trains"/>
@@ -2203,13 +2238,13 @@
     <!-- http://www.semanticweb.org/fito#RowMachine_Exercise -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/fito#RowMachine_Exercise">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#MachineWeightExercise"/>
-        <rdfs:subClassOf>
+        <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#isDoneWith"/>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fito#RowMachine"/>
             </owl:Restriction>
-        </rdfs:subClassOf>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#MachineWeightExercise"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#trains"/>
@@ -2411,13 +2446,13 @@
     <!-- http://www.semanticweb.org/fito#ShoulderPress_Exercise -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/fito#ShoulderPress_Exercise">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#MachineWeightExercise"/>
-        <rdfs:subClassOf>
+        <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#isDoneWith"/>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fito#ShoulderPressMachine"/>
             </owl:Restriction>
-        </rdfs:subClassOf>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#MachineWeightExercise"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/fito#trains"/>
@@ -2651,53 +2686,583 @@
     
 
 
-    <!-- http://www.semanticweb.org/fito#Adductor_with_abd_machine -->
+    <!-- http://www.semanticweb.org/fito#AuxotonicMuscleContraction -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#Adductor_with_abd_machine">
-        <rdf:type rdf:resource="http://www.semanticweb.org/fito#HipAdductor_Exercise"/>
-        <isDoneWith rdf:resource="http://www.semanticweb.org/fito#AdductorAndAbductorMachine"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#AuxotonicMuscleContraction">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fito#Auxotonic"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/fito#Dumbell5kg -->
+    <!-- http://www.semanticweb.org/fito#BarbellBenchPress -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#Dumbell5kg">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#BarbellBenchPress">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fito#BenchPress"/>
+        <isDoneWith rdf:resource="http://www.semanticweb.org/fito#Bench"/>
+        <isDoneWith rdf:resource="http://www.semanticweb.org/fito#OlympicBarbell"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#Bench -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#Bench">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fito#Bench"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#Bench_press_dumbbell -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#Bench_press_dumbbell">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fito#DumbbellBenchPress"/>
+        <isDoneWith rdf:resource="http://www.semanticweb.org/fito#Bench"/>
+        <isDoneWith rdf:resource="http://www.semanticweb.org/fito#Dumbbell"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#CableBar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#CableBar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fito#CableBar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#ChestFly_with_low_cables -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#ChestFly_with_low_cables">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fito#LowCableChestFly"/>
+        <isDoneWith rdf:resource="http://www.semanticweb.org/fito#MultiCableMachine"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#ChestPress -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#ChestPress">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fito#ChestPress_Exercise"/>
+        <hasMuscleContraction rdf:resource="http://www.semanticweb.org/fito#IsotonicMuscleContraction"/>
+        <isDoneWith rdf:resource="http://www.semanticweb.org/fito#ChestPressMachine"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#ChestPressMachine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#ChestPressMachine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fito#ChestPressMachine"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#Chest_fly_with_high_cable -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#Chest_fly_with_high_cable">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fito#HighCableChestFly"/>
+        <hasMuscleContraction rdf:resource="http://www.semanticweb.org/fito#IsotonicMuscleContraction"/>
+        <isDoneWith rdf:resource="http://www.semanticweb.org/fito#DHandle"/>
+        <isDoneWith rdf:resource="http://www.semanticweb.org/fito#MultiCableMachine"/>
+        <hasReps rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</hasReps>
+        <hasSets rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hasSets>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#Cyclette -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#Cyclette">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fito#Cyclette"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#DHandle -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#DHandle">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fito#DHandle"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#DipBar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#DipBar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fito#DipBar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#DoubleDHandle -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#DoubleDHandle">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fito#DoubleD"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#Dumbbell -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#Dumbbell">
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#Dumbbell"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/fito#FrenchPressExercise -->
+    <!-- http://www.semanticweb.org/fito#EZBarbell -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#FrenchPressExercise">
-        <rdf:type rdf:resource="http://www.semanticweb.org/fito#FrenchPress"/>
-        <isDoneWith rdf:resource="http://www.semanticweb.org/fito#Dumbell5kg"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#EZBarbell">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fito#EZBarbell"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/fito#es_stretching_1 -->
+    <!-- http://www.semanticweb.org/fito#Elliptical -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#es_stretching_1">
-        <rdf:type rdf:resource="http://www.semanticweb.org/fito#FlexibilityExercise"/>
-        <trains rdf:resource="https://www.wikidata.org/wiki/Q19087"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#Elliptical">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fito#Elliptical"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/fito#lat_exercise -->
+    <!-- http://www.semanticweb.org/fito#FreeBodyPushUp -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#lat_exercise">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#FreeBodyPushUp">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fito#PushUps"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#IsokineticMuscleContraction -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#IsokineticMuscleContraction">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fito#Isokinetic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#IsometricMuscleContraction -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#IsometricMuscleContraction">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fito#Isometric"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#IsotonicMuscleContraction -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#IsotonicMuscleContraction">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fito#Isotonic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#Kettlebell -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#Kettlebell">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fito#Kettlebell"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#LatMachine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#LatMachine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fito#LatMachine"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#LatPullDownMachine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#LatPullDownMachine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fito#LatPullDownMachine"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#LegCurlAndLegExtensionMachine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#LegCurlAndLegExtensionMachine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fito#LegCurlMachine"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/fito#LegExtensionMachine"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#LegPressMachine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#LegPressMachine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fito#LegPressMachine"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#LowToHighChestFly -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#LowToHighChestFly">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fito#LowToHighChestFly"/>
+        <isDoneWith rdf:resource="http://www.semanticweb.org/fito#MultiCableMachine"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#MultiCableMachine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#MultiCableMachine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fito#HighCableMachine"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/fito#LowCableMachine"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#Obliques -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#Obliques">
+        <rdf:type rdf:resource="http://purl.org/sig/ont/fma/fma13335"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#OlympicBarbell -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#OlympicBarbell">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fito#OlympicBarbell"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#PectoralMachine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#PectoralMachine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fito#PectoralMachine"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#PlyometricMuscleContraction -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#PlyometricMuscleContraction">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fito#Plyometric"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#PullUpBar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#PullUpBar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fito#PullUpBar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#Rack -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#Rack">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fito#Rack"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#Rope -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#Rope">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fito#Rope"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#RowMachine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#RowMachine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fito#RowMachine"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#RowingMachine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#RowingMachine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fito#RowingMachine"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#SafetySquatBarbell -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#SafetySquatBarbell">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fito#SafetySquatBarbell"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#ShoulderPressMachine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#ShoulderPressMachine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fito#ShoulderPressMachine"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#StraightBarbell -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#StraightBarbell">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fito#StraightBarbell"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#TreadMillMachine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#TreadMillMachine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fito#Treadmill"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#VBar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#VBar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fito#VBar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#WeightDisk -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#WeightDisk">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fito#WeightDisk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#concentrated_curl -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#concentrated_curl">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fito#ConcentratedCurl"/>
+        <isDoneWith rdf:resource="http://www.semanticweb.org/fito#Dumbbell"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#deadlift -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#deadlift">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fito#Deadlift"/>
+        <isDoneWith rdf:resource="http://www.semanticweb.org/fito#OlympicBarbell"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#french_press_ez_barbell -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#french_press_ez_barbell">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fito#EZBarbellFrenchPress"/>
+        <isDoneWith rdf:resource="http://www.semanticweb.org/fito#EZBarbell"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#french_press_straight -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#french_press_straight">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fito#StraightBarbellFrenchPress"/>
+        <isDoneWith rdf:resource="http://www.semanticweb.org/fito#StraightBarbell"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#front_raise_barbell -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#front_raise_barbell">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fito#BarbellFrontRaise"/>
+        <isDoneWith rdf:resource="http://www.semanticweb.org/fito#StraightBarbell"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#front_raise_dumbbell -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#front_raise_dumbbell">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fito#DumbbellFrontRaise"/>
+        <isDoneWith rdf:resource="http://www.semanticweb.org/fito#Dumbbell"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#hammer_curl -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#hammer_curl">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fito#HammerCurl"/>
+        <isDoneWith rdf:resource="http://www.semanticweb.org/fito#Dumbbell"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#lat_pulldown -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#lat_pulldown">
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#LatMachine_Exercise"/>
-        <isDoneWith rdf:resource="http://www.semanticweb.org/fito#latmachine"/>
+        <isDoneWith rdf:resource="http://www.semanticweb.org/fito#LatMachine"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/fito#latmachine -->
+    <!-- http://www.semanticweb.org/fito#leg_curl -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#latmachine"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#leg_curl">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fito#LegCurl_Exercise"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#leg_extension -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#leg_extension">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fito#LegExtension_Exercise"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#military_press -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#military_press">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fito#MilitaryPress"/>
+        <isDoneWith rdf:resource="http://www.semanticweb.org/fito#OlympicBarbell"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#one_hand_front_raise -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#one_hand_front_raise">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fito#DumbbellFrontRaise"/>
+        <isDoneWith rdf:resource="http://www.semanticweb.org/fito#Dumbbell"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#one_hand_shoulder_fly -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#one_hand_shoulder_fly">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fito#ShoulderFly"/>
+        <isDoneWith rdf:resource="http://www.semanticweb.org/fito#Dumbbell"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#pectoral -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#pectoral">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fito#Pectoral_Exercise"/>
+        <isDoneWith rdf:resource="http://www.semanticweb.org/fito#PectoralMachine"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#row_close_grip -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#row_close_grip">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fito#RowMachine_Exercise"/>
+        <isDoneWith rdf:resource="http://www.semanticweb.org/fito#RowMachine"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#row_wide_grip -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#row_wide_grip">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fito#RowMachine_Exercise"/>
+        <isDoneWith rdf:resource="http://www.semanticweb.org/fito#RowMachine"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#rower_barbell -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#rower_barbell">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fito#BarbellRower"/>
+        <isDoneWith rdf:resource="http://www.semanticweb.org/fito#StraightBarbell"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#rower_dumbbells -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#rower_dumbbells">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fito#DumbbellsRower"/>
+        <isDoneWith rdf:resource="http://www.semanticweb.org/fito#Dumbbell"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#shoulder_fly -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#shoulder_fly">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fito#ShoulderFly"/>
+        <isDoneWith rdf:resource="http://www.semanticweb.org/fito#Dumbbell"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#shoulder_press -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#shoulder_press">
+        <isDoneWith rdf:resource="http://www.semanticweb.org/fito#ShoulderPressMachine"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#spider_curl_with_barbell -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#spider_curl_with_barbell">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fito#SpiderBarbellCurl"/>
+        <isDoneWith rdf:resource="http://www.semanticweb.org/fito#EZBarbell"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#spider_curl_with_dumbbell -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#spider_curl_with_dumbbell">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fito#SpiderDumbbellsCurl"/>
+        <isDoneWith rdf:resource="http://www.semanticweb.org/fito#Dumbbell"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#squat_barbell -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#squat_barbell">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fito#BarbellSquat"/>
+        <isDoneWith rdf:resource="http://www.semanticweb.org/fito#OlympicBarbell"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#squat_kettlebell -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#squat_kettlebell">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fito#KettlebellSquat"/>
+        <isDoneWith rdf:resource="http://www.semanticweb.org/fito#Kettlebell"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#leg_press_30° -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#leg_press_30°">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fito#LegPress_Exercise"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#leg_press_45° -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#leg_press_45°">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fito#LegPress_Exercise"/>
+    </owl:NamedIndividual>
     
 
 
@@ -2826,6 +3391,18 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.org/sig/ont/fma/fma5022"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fito#Equipment"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fito#Exercise"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fito#MuscleContraction"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fito#Workout"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fito#WorkoutGoal"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fito#WorkoutPlan"/>
+        </owl:members>
+    </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
