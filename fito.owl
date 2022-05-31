@@ -591,6 +591,7 @@
     <owl:Class rdf:about="http://www.semanticweb.org/fito#AerobicExercise">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#Exercise"/>
         <owl:disjointWith rdf:resource="http://www.semanticweb.org/fito#AnaerobicExercise"/>
+        <rdfs:comment>Aerobic exercise is physical exercise of low to high intensity that depends primarily on the aerobic energy-generating process. &quot;Aerobic&quot; is defined as &quot;relating to, involving, or requiring oxygen&quot;, and refers to the use of oxygen to meet energy demands during exercise via aerobic metabolism adequately.</rdfs:comment>
         <rdfs:label>Aerobic exercise</rdfs:label>
     </owl:Class>
     
@@ -600,6 +601,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/fito#AnaerobicExercise">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#Exercise"/>
+        <rdfs:comment>Anaerobic exercise is a type of exercise that breaks down glucose in the body without using oxygen; anaerobic means &quot;without oxygen&quot;. In practical terms, this means that anaerobic exercise is more intense, but shorter in duration than aerobic exercise.</rdfs:comment>
         <rdfs:label>Anaerobic exercise</rdfs:label>
     </owl:Class>
     
@@ -650,6 +652,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/fito#Attachment">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#Equipment"/>
+        <rdfs:comment>a device connected to a particular machine that allows the athlete to interact with it</rdfs:comment>
     </owl:Class>
     
 
@@ -658,6 +661,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/fito#Auxotonic">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#DynamicMuscleContraction"/>
+        <rdfs:comment>An auxotonic contraction occurs when neither the force nor the length remain constant, essentially a combination of the variable isometric and isotonic states of contraction.</rdfs:comment>
     </owl:Class>
     
 
@@ -727,6 +731,7 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#FreeWeightExercise"/>
+        <rdfs:comment>Exercise done with some barbell</rdfs:comment>
     </owl:Class>
     
 
@@ -927,7 +932,7 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <rdfs:comment>esercizi a corpo libero dove il corpo è utilizzato come peso, potrebbero essere usati degli equipment come le parallele o la sbarra</rdfs:comment>
+        <rdfs:comment>Bodyweight exercises (also called bodyweight workouts) are strength-training exercises that use an individual&apos;s own weight to provide resistance against gravity.</rdfs:comment>
         <rdfs:label>Body weight exercise</rdfs:label>
     </owl:Class>
     
@@ -998,6 +1003,7 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:subClassOf>
+        <rdfs:comment>Cardio is defined as any type of exercise that gets your heart rate up and keeps it up for a prolonged period of time</rdfs:comment>
         <rdfs:label>Cardio exercise</rdfs:label>
     </owl:Class>
     
@@ -1282,6 +1288,7 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#FreeWeightExercise"/>
+        <rdfs:comment>Exercise done with some dumbbels</rdfs:comment>
     </owl:Class>
     
 
@@ -1411,6 +1418,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/fito#Equipment">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#DomainEntity"/>
+        <rdfs:comment>Exercise equipment is any apparatus or device used during physical activity to enhance the strength or conditioning effects of that exercise by providing either fixed or adjustable amounts of resistance, or to otherwise enhance the experience or outcome of an exercise routine.</rdfs:comment>
     </owl:Class>
     
 
@@ -1439,6 +1447,7 @@
                 <owl:allValuesFrom rdf:resource="http://purl.org/sig/ont/fma/fma5022"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>Flexibility is the ability of the joints or a group of joints, and muscles to move through a range of motion effectively unrestricted and pain free.</rdfs:comment>
         <rdfs:label>Flexibility exercise</rdfs:label>
     </owl:Class>
     
@@ -1504,6 +1513,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/fito#FreeWeight">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#Equipment"/>
+        <rdfs:comment>Free weights are a type of weight used in a free motion exercise.
+Unlike machines, where the movement are fixed, free weights allow to work in any range of motion. This requires to work against gravity and use those stabilizer muscles to engage.</rdfs:comment>
         <rdfs:label>Free weight</rdfs:label>
     </owl:Class>
     
@@ -1519,7 +1530,7 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#OverloadWeightExercise"/>
-        <rdfs:comment>nei free weight ricadono quegli esercizi che sono fatti con pesi liberi (manubri, bilancieri, ecc), gli esercizi con elastici (non tutti, solo quelli tipo curl con elastici e gli esercizi a corpo libero con sovraccarico (dip/trazioni con sovraccarico)</rdfs:comment>
+        <rdfs:comment>form of strength training that can be defined as resistance exercises provided by free weight that aren&apos;t attached to anything and that you can quite literally pick up and move.</rdfs:comment>
         <rdfs:label>Free weight exercise</rdfs:label>
     </owl:Class>
     
@@ -1640,6 +1651,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/fito#Isokinetic">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#DynamicMuscleContraction"/>
+        <rdfs:comment>An isokinetic muscle contraction occurs when the velocity of the muscle contraction remains constant while the length of the muscle changes.</rdfs:comment>
     </owl:Class>
     
 
@@ -1648,6 +1660,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/fito#Isometric">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#StaticMuscleContraction"/>
+        <rdfs:comment>An isometric contraction of a muscle generates tension without changing length.</rdfs:comment>
     </owl:Class>
     
 
@@ -1656,6 +1669,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/fito#Isotonic">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#DynamicMuscleContraction"/>
+        <rdfs:comment>In isotonic contraction, the tension in the muscle remains constant despite a change in muscle length. This occurs when a muscle&apos;s force of contraction matches the total load on the muscle.</rdfs:comment>
     </owl:Class>
     
 
@@ -1866,7 +1880,7 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#OverloadWeightExercise"/>
-        <rdfs:comment>esercizi con macchinari (anche quelli con i cavi)</rdfs:comment>
+        <rdfs:comment>Esercise done with some Machine</rdfs:comment>
         <rdfs:label>Machine weight exercise</rdfs:label>
     </owl:Class>
     
@@ -1902,6 +1916,7 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#Exercise"/>
+        <rdfs:comment>exercises that are specifically geared towards training your range of motion around joints. They involve actively moving, contracting and relaxing muscles through the joints range of motion. Some of these may isolate, while others involve multi-joint movement patterns.</rdfs:comment>
         <rdfs:label>Mobility exercise</rdfs:label>
     </owl:Class>
     
@@ -2040,6 +2055,7 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:subClassOf>
+        <rdfs:comment>method of strength training that advocates for the gradual increase of the stress placed upon the musculoskeletal and nervous system via not only the weight of the body itself, but using some additional weight.</rdfs:comment>
         <rdfs:label>Overload weight exercise</rdfs:label>
     </owl:Class>
     
@@ -2114,6 +2130,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/fito#Plyometric">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#DynamicMuscleContraction"/>
+        <rdfs:comment>A plyometric exercise is an exercise in which an eccentric muscle contraction is quickly followed by a concentric muscle contraction.</rdfs:comment>
     </owl:Class>
     
 
@@ -2561,6 +2578,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/fito#Support">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#Equipment"/>
+        <rdfs:comment>device used as a support during physical exercise.</rdfs:comment>
     </owl:Class>
     
 
@@ -2632,6 +2650,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/fito#WeightMachine">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#Equipment"/>
+        <rdfs:comment>A weight machine is an exercise machine used for weight training that uses gravity as the primary source of resistance and a combination of simple machines to convey that resistance to the person using the machine. Each of the simple machines (pulley, lever, wheel, incline) changes the mechanical advantage of the overall machine relative to the weight.</rdfs:comment>
         <rdfs:label>Weight machine</rdfs:label>
     </owl:Class>
     
@@ -2641,6 +2660,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/fito#Workout">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fito#DomainEntity"/>
+        <rdfs:comment>a session of physical exercises</rdfs:comment>
     </owl:Class>
     
 
@@ -2694,6 +2714,8 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#BenchPress"/>
         <isDoneWith rdf:resource="http://www.semanticweb.org/fito#Bench"/>
         <isDoneWith rdf:resource="http://www.semanticweb.org/fito#OlympicBarbell"/>
+        <hasReps rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</hasReps>
+        <hasSets rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</hasSets>
     </owl:NamedIndividual>
     
 
@@ -2710,8 +2732,11 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#Bench_press_dumbbell">
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#DumbbellBenchPress"/>
+        <hasMuscleContraction rdf:resource="http://www.semanticweb.org/fito#IsotonicMuscleContraction"/>
         <isDoneWith rdf:resource="http://www.semanticweb.org/fito#Bench"/>
         <isDoneWith rdf:resource="http://www.semanticweb.org/fito#Dumbbell"/>
+        <hasReps rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</hasReps>
+        <hasSets rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</hasSets>
     </owl:NamedIndividual>
     
 
@@ -2738,6 +2763,8 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#ChestFly_with_low_cables">
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#LowCableChestFly"/>
         <isDoneWith rdf:resource="http://www.semanticweb.org/fito#MultiCableMachine"/>
+        <hasReps rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</hasReps>
+        <hasSets rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</hasSets>
     </owl:NamedIndividual>
     
 
@@ -2748,6 +2775,8 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#ChestPress_Exercise"/>
         <hasMuscleContraction rdf:resource="http://www.semanticweb.org/fito#IsotonicMuscleContraction"/>
         <isDoneWith rdf:resource="http://www.semanticweb.org/fito#ChestPressMachine"/>
+        <hasReps rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</hasReps>
+        <hasSets rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hasSets>
     </owl:NamedIndividual>
     
 
@@ -2833,6 +2862,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#FreeBodyPushUp">
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#PushUps"/>
+        <hasReps rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</hasReps>
+        <hasSets rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</hasSets>
     </owl:NamedIndividual>
     
 
@@ -2907,6 +2938,8 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#LowToHighChestFly">
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#LowToHighChestFly"/>
         <isDoneWith rdf:resource="http://www.semanticweb.org/fito#MultiCableMachine"/>
+        <hasReps rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</hasReps>
+        <hasSets rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hasSets>
     </owl:NamedIndividual>
     
 
@@ -3044,7 +3077,10 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#concentrated_curl">
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#ConcentratedCurl"/>
+        <hasMuscleContraction rdf:resource="http://www.semanticweb.org/fito#IsotonicMuscleContraction"/>
         <isDoneWith rdf:resource="http://www.semanticweb.org/fito#Dumbbell"/>
+        <hasReps rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</hasReps>
+        <hasSets rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</hasSets>
     </owl:NamedIndividual>
     
 
@@ -3063,6 +3099,8 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#french_press_ez_barbell">
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#EZBarbellFrenchPress"/>
         <isDoneWith rdf:resource="http://www.semanticweb.org/fito#EZBarbell"/>
+        <hasReps rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</hasReps>
+        <hasSets rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</hasSets>
     </owl:NamedIndividual>
     
 
@@ -3072,6 +3110,8 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#french_press_straight">
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#StraightBarbellFrenchPress"/>
         <isDoneWith rdf:resource="http://www.semanticweb.org/fito#StraightBarbell"/>
+        <hasReps rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</hasReps>
+        <hasSets rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</hasSets>
     </owl:NamedIndividual>
     
 
@@ -3081,6 +3121,8 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#front_raise_barbell">
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#BarbellFrontRaise"/>
         <isDoneWith rdf:resource="http://www.semanticweb.org/fito#StraightBarbell"/>
+        <hasReps rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</hasReps>
+        <hasSets rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hasSets>
     </owl:NamedIndividual>
     
 
@@ -3089,7 +3131,10 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#front_raise_dumbbell">
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#DumbbellFrontRaise"/>
+        <hasMuscleContraction rdf:resource="http://www.semanticweb.org/fito#IsotonicMuscleContraction"/>
         <isDoneWith rdf:resource="http://www.semanticweb.org/fito#Dumbbell"/>
+        <hasReps rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</hasReps>
+        <hasSets rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</hasSets>
     </owl:NamedIndividual>
     
 
@@ -3107,6 +3152,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#lat_pulldown">
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#LatMachine_Exercise"/>
+        <hasMuscleContraction rdf:resource="http://www.semanticweb.org/fito#IsotonicMuscleContraction"/>
         <isDoneWith rdf:resource="http://www.semanticweb.org/fito#LatMachine"/>
         <hasReps rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</hasReps>
         <hasSets rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hasSets>
@@ -3118,6 +3164,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#leg_curl">
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#LegCurl_Exercise"/>
+        <hasReps rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</hasReps>
+        <hasSets rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hasSets>
     </owl:NamedIndividual>
     
 
@@ -3126,6 +3174,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#leg_extension">
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#LegExtension_Exercise"/>
+        <hasReps rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</hasReps>
+        <hasSets rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hasSets>
     </owl:NamedIndividual>
     
 
@@ -3135,6 +3185,8 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#military_press">
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#MilitaryPress"/>
         <isDoneWith rdf:resource="http://www.semanticweb.org/fito#OlympicBarbell"/>
+        <hasReps rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</hasReps>
+        <hasSets rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</hasSets>
     </owl:NamedIndividual>
     
 
@@ -3143,7 +3195,10 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#one_hand_front_raise">
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#DumbbellFrontRaise"/>
+        <hasMuscleContraction rdf:resource="http://www.semanticweb.org/fito#IsotonicMuscleContraction"/>
         <isDoneWith rdf:resource="http://www.semanticweb.org/fito#Dumbbell"/>
+        <hasReps rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</hasReps>
+        <hasSets rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</hasSets>
     </owl:NamedIndividual>
     
 
@@ -3153,6 +3208,8 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#one_hand_shoulder_fly">
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#ShoulderFly"/>
         <isDoneWith rdf:resource="http://www.semanticweb.org/fito#Dumbbell"/>
+        <hasReps rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</hasReps>
+        <hasSets rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</hasSets>
     </owl:NamedIndividual>
     
 
@@ -3162,6 +3219,18 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#pectoral">
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#Pectoral_Exercise"/>
         <isDoneWith rdf:resource="http://www.semanticweb.org/fito#PectoralMachine"/>
+        <hasReps rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</hasReps>
+        <hasSets rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hasSets>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fito#plank -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#plank">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fito#BodyWeightExercise"/>
+        <hasMuscleContraction rdf:resource="http://www.semanticweb.org/fito#IsometricMuscleContraction"/>
+        <hasDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasDuration>
     </owl:NamedIndividual>
     
 
@@ -3197,6 +3266,8 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#rower_barbell">
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#BarbellRower"/>
         <isDoneWith rdf:resource="http://www.semanticweb.org/fito#StraightBarbell"/>
+        <hasReps rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</hasReps>
+        <hasSets rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hasSets>
     </owl:NamedIndividual>
     
 
@@ -3205,7 +3276,10 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#rower_dumbbells">
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#DumbbellsRower"/>
+        <hasMuscleContraction rdf:resource="http://www.semanticweb.org/fito#IsotonicMuscleContraction"/>
         <isDoneWith rdf:resource="http://www.semanticweb.org/fito#Dumbbell"/>
+        <hasReps rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</hasReps>
+        <hasSets rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hasSets>
     </owl:NamedIndividual>
     
 
@@ -3215,6 +3289,8 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#shoulder_fly">
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#ShoulderFly"/>
         <isDoneWith rdf:resource="http://www.semanticweb.org/fito#Dumbbell"/>
+        <hasReps rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</hasReps>
+        <hasSets rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</hasSets>
     </owl:NamedIndividual>
     
 
@@ -3223,6 +3299,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#shoulder_press">
         <isDoneWith rdf:resource="http://www.semanticweb.org/fito#ShoulderPressMachine"/>
+        <hasReps rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</hasReps>
+        <hasSets rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hasSets>
     </owl:NamedIndividual>
     
 
@@ -3232,6 +3310,8 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#spider_curl_with_barbell">
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#SpiderBarbellCurl"/>
         <isDoneWith rdf:resource="http://www.semanticweb.org/fito#EZBarbell"/>
+        <hasReps rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</hasReps>
+        <hasSets rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</hasSets>
     </owl:NamedIndividual>
     
 
@@ -3241,6 +3321,8 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#spider_curl_with_dumbbell">
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#SpiderDumbbellsCurl"/>
         <isDoneWith rdf:resource="http://www.semanticweb.org/fito#Dumbbell"/>
+        <hasReps rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</hasReps>
+        <hasSets rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</hasSets>
     </owl:NamedIndividual>
     
 
@@ -3250,6 +3332,8 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#squat_barbell">
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#BarbellSquat"/>
         <isDoneWith rdf:resource="http://www.semanticweb.org/fito#OlympicBarbell"/>
+        <hasReps rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</hasReps>
+        <hasSets rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hasSets>
     </owl:NamedIndividual>
     
 
@@ -3259,6 +3343,8 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#squat_kettlebell">
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#KettlebellSquat"/>
         <isDoneWith rdf:resource="http://www.semanticweb.org/fito#Kettlebell"/>
+        <hasReps rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</hasReps>
+        <hasSets rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</hasSets>
     </owl:NamedIndividual>
     
 
@@ -3403,6 +3489,20 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/fito#Dumbbell">
+        <rdfs:comment>The dumbbell, a type of free weight, is a piece of equipment used in weight training. It can be used individually or in pairs, with one in each hand.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // General axioms
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -3423,11 +3523,43 @@
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/fito#AdductorMachine"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fito#CableWeightMachine"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fito#ChestPressMachine"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fito#LatMachine"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fito#LegCurlMachine"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fito#LegPressMachine"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fito#PectoralMachine"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fito#RowMachine"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fito#ShoulderPressMachine"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="http://www.semanticweb.org/fito#Attachment"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/fito#CardioMachine"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/fito#FreeWeight"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/fito#Support"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/fito#WeightMachine"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/fito#Barbell"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fito#Dumbbell"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fito#Kettlebell"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fito#WeightDisk"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/fito#Bench"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fito#DipBar"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fito#PullUpBar"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fito#Rack"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
@@ -3462,17 +3594,6 @@
             <rdf:Description rdf:about="http://www.semanticweb.org/fito#Elliptical"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/fito#RowingMachine"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/fito#Treadmill"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/fito#Dumbbell"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/fito#EZBarbell"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/fito#Kettlebell"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/fito#OlympicBarbell"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/fito#SafetySquatBarbell"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/fito#WeightDisk"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
