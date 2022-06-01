@@ -54,9 +54,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/fito#causeContraction -->
+    <!-- http://www.semanticweb.org/fito#causeMuscleContraction -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fito#causeContraction">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fito#causeMuscleContraction">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/fito#Exercise"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/fito#MuscleContraction"/>
     </owl:ObjectProperty>
@@ -151,7 +151,7 @@
     <!-- http://www.semanticweb.org/fito#hasMuscleContraction -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fito#hasMuscleContraction">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/fito#Exercise"/>
+        <rdfs:domain rdf:resource="http://purl.org/sig/ont/fma/fma5022"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/fito#MuscleContraction"/>
     </owl:ObjectProperty>
     
@@ -2732,7 +2732,7 @@ Unlike machines, where the movement are fixed, free weights allow to work in any
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#Bench_press_dumbbell">
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#DumbbellBenchPress"/>
-        <hasMuscleContraction rdf:resource="http://www.semanticweb.org/fito#IsotonicMuscleContraction"/>
+        <causeMuscleContraction rdf:resource="http://www.semanticweb.org/fito#IsotonicMuscleContraction"/>
         <isDoneWith rdf:resource="http://www.semanticweb.org/fito#Bench"/>
         <isDoneWith rdf:resource="http://www.semanticweb.org/fito#Dumbbell"/>
         <hasReps rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</hasReps>
@@ -2773,7 +2773,7 @@ Unlike machines, where the movement are fixed, free weights allow to work in any
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#ChestPress">
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#ChestPress_Exercise"/>
-        <hasMuscleContraction rdf:resource="http://www.semanticweb.org/fito#IsotonicMuscleContraction"/>
+        <causeMuscleContraction rdf:resource="http://www.semanticweb.org/fito#IsotonicMuscleContraction"/>
         <isDoneWith rdf:resource="http://www.semanticweb.org/fito#ChestPressMachine"/>
         <hasReps rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</hasReps>
         <hasSets rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hasSets>
@@ -2793,7 +2793,7 @@ Unlike machines, where the movement are fixed, free weights allow to work in any
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#Chest_fly_with_high_cable">
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#HighCableChestFly"/>
-        <hasMuscleContraction rdf:resource="http://www.semanticweb.org/fito#IsotonicMuscleContraction"/>
+        <causeMuscleContraction rdf:resource="http://www.semanticweb.org/fito#IsotonicMuscleContraction"/>
         <isDoneWith rdf:resource="http://www.semanticweb.org/fito#DHandle"/>
         <isDoneWith rdf:resource="http://www.semanticweb.org/fito#MultiCableMachine"/>
         <hasReps rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</hasReps>
@@ -3077,7 +3077,7 @@ Unlike machines, where the movement are fixed, free weights allow to work in any
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#concentrated_curl">
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#ConcentratedCurl"/>
-        <hasMuscleContraction rdf:resource="http://www.semanticweb.org/fito#IsotonicMuscleContraction"/>
+        <causeMuscleContraction rdf:resource="http://www.semanticweb.org/fito#IsotonicMuscleContraction"/>
         <isDoneWith rdf:resource="http://www.semanticweb.org/fito#Dumbbell"/>
         <hasReps rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</hasReps>
         <hasSets rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</hasSets>
@@ -3131,7 +3131,7 @@ Unlike machines, where the movement are fixed, free weights allow to work in any
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#front_raise_dumbbell">
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#DumbbellFrontRaise"/>
-        <hasMuscleContraction rdf:resource="http://www.semanticweb.org/fito#IsotonicMuscleContraction"/>
+        <causeMuscleContraction rdf:resource="http://www.semanticweb.org/fito#IsotonicMuscleContraction"/>
         <isDoneWith rdf:resource="http://www.semanticweb.org/fito#Dumbbell"/>
         <hasReps rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</hasReps>
         <hasSets rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</hasSets>
@@ -3152,7 +3152,7 @@ Unlike machines, where the movement are fixed, free weights allow to work in any
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#lat_pulldown">
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#LatMachine_Exercise"/>
-        <hasMuscleContraction rdf:resource="http://www.semanticweb.org/fito#IsotonicMuscleContraction"/>
+        <causeMuscleContraction rdf:resource="http://www.semanticweb.org/fito#IsotonicMuscleContraction"/>
         <isDoneWith rdf:resource="http://www.semanticweb.org/fito#LatMachine"/>
         <hasReps rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</hasReps>
         <hasSets rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hasSets>
@@ -3195,7 +3195,7 @@ Unlike machines, where the movement are fixed, free weights allow to work in any
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#one_hand_front_raise">
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#DumbbellFrontRaise"/>
-        <hasMuscleContraction rdf:resource="http://www.semanticweb.org/fito#IsotonicMuscleContraction"/>
+        <causeMuscleContraction rdf:resource="http://www.semanticweb.org/fito#IsotonicMuscleContraction"/>
         <isDoneWith rdf:resource="http://www.semanticweb.org/fito#Dumbbell"/>
         <hasReps rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</hasReps>
         <hasSets rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</hasSets>
@@ -3229,7 +3229,7 @@ Unlike machines, where the movement are fixed, free weights allow to work in any
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#plank">
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#BodyWeightExercise"/>
-        <hasMuscleContraction rdf:resource="http://www.semanticweb.org/fito#IsometricMuscleContraction"/>
+        <causeMuscleContraction rdf:resource="http://www.semanticweb.org/fito#IsometricMuscleContraction"/>
         <hasDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasDuration>
     </owl:NamedIndividual>
     
@@ -3276,7 +3276,7 @@ Unlike machines, where the movement are fixed, free weights allow to work in any
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#rower_dumbbells">
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#DumbbellsRower"/>
-        <hasMuscleContraction rdf:resource="http://www.semanticweb.org/fito#IsotonicMuscleContraction"/>
+        <causeMuscleContraction rdf:resource="http://www.semanticweb.org/fito#IsotonicMuscleContraction"/>
         <isDoneWith rdf:resource="http://www.semanticweb.org/fito#Dumbbell"/>
         <hasReps rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</hasReps>
         <hasSets rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hasSets>
