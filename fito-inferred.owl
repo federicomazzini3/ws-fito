@@ -354,11 +354,11 @@
 
     <!-- http://www.w3.org/2002/07/owl#topObjectProperty -->
 
-    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty">
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ReflexiveProperty"/>
-    </rdf:Description>
+    </owl:ObjectProperty>
     
 
 
@@ -11724,8 +11724,7 @@ Unlike machines, where the movement are fixed, free weights allow to work in any
 
     <!-- http://www.semanticweb.org/fito#Bench -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/fito#Bench">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#Bench">
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#Bench"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#DomainEntity"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#Equipment"/>
@@ -11734,7 +11733,7 @@ Unlike machines, where the movement are fixed, free weights allow to work in any
         <fito:allows rdf:resource="http://www.semanticweb.org/fito#Bench_press_dumbbell"/>
         <fito:involves rdf:resource="http://www.wikidata.org/wiki/Q660627"/>
         <fito:involves rdf:resource="https://www.wikidata.org/wiki/Q83379"/>
-    </owl:Class>
+    </owl:NamedIndividual>
     
 
 
@@ -11787,13 +11786,12 @@ Unlike machines, where the movement are fixed, free weights allow to work in any
 
     <!-- http://www.semanticweb.org/fito#CableBar -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/fito#CableBar">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#CableBar">
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#Attachment"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#CableBar"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#DomainEntity"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#Equipment"/>
-    </owl:Class>
+    </owl:NamedIndividual>
     
 
 
@@ -11843,15 +11841,14 @@ Unlike machines, where the movement are fixed, free weights allow to work in any
 
     <!-- http://www.semanticweb.org/fito#ChestPressMachine -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/fito#ChestPressMachine">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#ChestPressMachine">
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#ChestPressMachine"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#DomainEntity"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#Equipment"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#WeightMachine"/>
         <fito:allows rdf:resource="http://www.semanticweb.org/fito#ChestPress"/>
         <fito:involves rdf:resource="http://www.wikidata.org/wiki/Q660627"/>
-    </owl:Class>
+    </owl:NamedIndividual>
     
 
 
@@ -11883,20 +11880,18 @@ Unlike machines, where the movement are fixed, free weights allow to work in any
 
     <!-- http://www.semanticweb.org/fito#Cyclette -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/fito#Cyclette">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#Cyclette">
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#CardioMachine"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#Cyclette"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#DomainEntity"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#Equipment"/>
-    </owl:Class>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://www.semanticweb.org/fito#DHandle -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/fito#DHandle">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#DHandle">
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#Attachment"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#DHandle"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#DomainEntity"/>
@@ -11904,19 +11899,18 @@ Unlike machines, where the movement are fixed, free weights allow to work in any
         <fito:allows rdf:resource="http://www.semanticweb.org/fito#Chest_fly_with_high_cable"/>
         <fito:involves rdf:resource="http://www.wikidata.org/wiki/Q130243"/>
         <fito:involves rdf:resource="http://www.wikidata.org/wiki/Q660627"/>
-    </owl:Class>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://www.semanticweb.org/fito#DipBar -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/fito#DipBar">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#DipBar">
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#DipBar"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#DomainEntity"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#Equipment"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#Support"/>
-    </owl:Class>
+    </owl:NamedIndividual>
     
 
 
@@ -11933,8 +11927,7 @@ Unlike machines, where the movement are fixed, free weights allow to work in any
 
     <!-- http://www.semanticweb.org/fito#Dumbbell -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/fito#Dumbbell">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#Dumbbell">
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#DomainEntity"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#Dumbbell"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#Equipment"/>
@@ -11955,14 +11948,13 @@ Unlike machines, where the movement are fixed, free weights allow to work in any
         <fito:involves rdf:resource="https://www.wikidata.org/wiki/Q19087"/>
         <fito:involves rdf:resource="https://www.wikidata.org/wiki/Q204113"/>
         <fito:involves rdf:resource="https://www.wikidata.org/wiki/Q83379"/>
-    </owl:Class>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://www.semanticweb.org/fito#EZBarbell -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/fito#EZBarbell">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#EZBarbell">
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#Barbell"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#DomainEntity"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#EZBarbell"/>
@@ -11972,19 +11964,18 @@ Unlike machines, where the movement are fixed, free weights allow to work in any
         <fito:allows rdf:resource="http://www.semanticweb.org/fito#spider_curl_with_barbell"/>
         <fito:involves rdf:resource="http://www.wikidata.org/wiki/Q601016"/>
         <fito:involves rdf:resource="https://www.wikidata.org/wiki/Q83379"/>
-    </owl:Class>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://www.semanticweb.org/fito#Elliptical -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/fito#Elliptical">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#Elliptical">
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#CardioMachine"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#DomainEntity"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#Elliptical"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#Equipment"/>
-    </owl:Class>
+    </owl:NamedIndividual>
     
 
 
@@ -12042,8 +12033,7 @@ Unlike machines, where the movement are fixed, free weights allow to work in any
 
     <!-- http://www.semanticweb.org/fito#Kettlebell -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/fito#Kettlebell">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#Kettlebell">
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#DomainEntity"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#Equipment"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#FreeWeight"/>
@@ -12052,14 +12042,13 @@ Unlike machines, where the movement are fixed, free weights allow to work in any
         <fito:involves rdf:resource="https://www.wikidata.org/wiki/Q196002"/>
         <fito:involves rdf:resource="https://www.wikidata.org/wiki/Q504536"/>
         <fito:involves rdf:resource="https://www.wikidata.org/wiki/Q637545"/>
-    </owl:Class>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://www.semanticweb.org/fito#LatMachine -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/fito#LatMachine">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#LatMachine">
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#DomainEntity"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#Equipment"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#LatMachine"/>
@@ -12068,20 +12057,19 @@ Unlike machines, where the movement are fixed, free weights allow to work in any
         <fito:involves rdf:resource="http://www.wikidata.org/wiki/Q283673"/>
         <fito:involves rdf:resource="https://www.wikidata.org/wiki/Q19087"/>
         <fito:involves rdf:resource="https://www.wikidata.org/wiki/Q83379"/>
-    </owl:Class>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://www.semanticweb.org/fito#LatPullDownMachine -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/fito#LatPullDownMachine">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#LatPullDownMachine">
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#CableWeightMachine"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#DomainEntity"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#Equipment"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#LatPullDownMachine"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#WeightMachine"/>
-    </owl:Class>
+    </owl:NamedIndividual>
     
 
 
@@ -12099,20 +12087,18 @@ Unlike machines, where the movement are fixed, free weights allow to work in any
 
     <!-- http://www.semanticweb.org/fito#LegPressMachine -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/fito#LegPressMachine">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#LegPressMachine">
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#DomainEntity"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#Equipment"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#LegPressMachine"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#WeightMachine"/>
-    </owl:Class>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://www.semanticweb.org/fito#LowToHighChestFly -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/fito#LowToHighChestFly">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#LowToHighChestFly">
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#AnaerobicExercise"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#CableChestFly"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#ChestFly"/>
@@ -12130,14 +12116,13 @@ Unlike machines, where the movement are fixed, free weights allow to work in any
         <fito:trains rdf:resource="http://www.wikidata.org/wiki/Q660627"/>
         <fito:hasReps rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</fito:hasReps>
         <fito:hasSets rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</fito:hasSets>
-    </owl:Class>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://www.semanticweb.org/fito#MultiCableMachine -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/fito#MultiCableMachine">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#MultiCableMachine">
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#CableWeightMachine"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#DomainEntity"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#Equipment"/>
@@ -12150,7 +12135,7 @@ Unlike machines, where the movement are fixed, free weights allow to work in any
         <fito:allows rdf:resource="http://www.semanticweb.org/fito#LowToHighChestFly"/>
         <fito:involves rdf:resource="http://www.wikidata.org/wiki/Q130243"/>
         <fito:involves rdf:resource="http://www.wikidata.org/wiki/Q660627"/>
-    </owl:Class>
+    </owl:NamedIndividual>
     
 
 
@@ -12167,8 +12152,7 @@ Unlike machines, where the movement are fixed, free weights allow to work in any
 
     <!-- http://www.semanticweb.org/fito#OlympicBarbell -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/fito#OlympicBarbell">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#OlympicBarbell">
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#Barbell"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#DomainEntity"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#Equipment"/>
@@ -12187,21 +12171,20 @@ Unlike machines, where the movement are fixed, free weights allow to work in any
         <fito:involves rdf:resource="https://www.wikidata.org/wiki/Q504536"/>
         <fito:involves rdf:resource="https://www.wikidata.org/wiki/Q637545"/>
         <fito:involves rdf:resource="https://www.wikidata.org/wiki/Q83379"/>
-    </owl:Class>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://www.semanticweb.org/fito#PectoralMachine -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/fito#PectoralMachine">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#PectoralMachine">
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#DomainEntity"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#Equipment"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#PectoralMachine"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#WeightMachine"/>
         <fito:allows rdf:resource="http://www.semanticweb.org/fito#pectoral"/>
         <fito:involves rdf:resource="http://www.wikidata.org/wiki/Q660627"/>
-    </owl:Class>
+    </owl:NamedIndividual>
     
 
 
@@ -12218,44 +12201,40 @@ Unlike machines, where the movement are fixed, free weights allow to work in any
 
     <!-- http://www.semanticweb.org/fito#PullUpBar -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/fito#PullUpBar">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#PullUpBar">
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#DomainEntity"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#Equipment"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#PullUpBar"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#Support"/>
-    </owl:Class>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://www.semanticweb.org/fito#Rack -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/fito#Rack">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#Rack">
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#DomainEntity"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#Equipment"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#Rack"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#Support"/>
-    </owl:Class>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://www.semanticweb.org/fito#Rope -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/fito#Rope">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#Rope">
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#Attachment"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#DomainEntity"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#Equipment"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#Rope"/>
-    </owl:Class>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://www.semanticweb.org/fito#RowMachine -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/fito#RowMachine">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#RowMachine">
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#DomainEntity"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#Equipment"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#RowMachine"/>
@@ -12266,53 +12245,49 @@ Unlike machines, where the movement are fixed, free weights allow to work in any
         <fito:involves rdf:resource="http://www.wikidata.org/wiki/Q283673"/>
         <fito:involves rdf:resource="https://www.wikidata.org/wiki/Q19087"/>
         <fito:involves rdf:resource="https://www.wikidata.org/wiki/Q204113"/>
-    </owl:Class>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://www.semanticweb.org/fito#RowingMachine -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/fito#RowingMachine">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#RowingMachine">
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#CardioMachine"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#DomainEntity"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#Equipment"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#RowingMachine"/>
-    </owl:Class>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://www.semanticweb.org/fito#SafetySquatBarbell -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/fito#SafetySquatBarbell">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#SafetySquatBarbell">
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#Barbell"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#DomainEntity"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#Equipment"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#FreeWeight"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#SafetySquatBarbell"/>
-    </owl:Class>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://www.semanticweb.org/fito#ShoulderPressMachine -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/fito#ShoulderPressMachine">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#ShoulderPressMachine">
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#DomainEntity"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#Equipment"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#ShoulderPressMachine"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#WeightMachine"/>
         <fito:allows rdf:resource="http://www.semanticweb.org/fito#shoulder_press"/>
         <fito:involves rdf:resource="http://www.wikidata.org/wiki/Q130243"/>
-    </owl:Class>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://www.semanticweb.org/fito#StraightBarbell -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/fito#StraightBarbell">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#StraightBarbell">
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#Barbell"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#DomainEntity"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#Equipment"/>
@@ -12326,7 +12301,7 @@ Unlike machines, where the movement are fixed, free weights allow to work in any
         <fito:involves rdf:resource="http://www.wikidata.org/wiki/Q660627"/>
         <fito:involves rdf:resource="https://www.wikidata.org/wiki/Q19087"/>
         <fito:involves rdf:resource="https://www.wikidata.org/wiki/Q83379"/>
-    </owl:Class>
+    </owl:NamedIndividual>
     
 
 
@@ -12343,25 +12318,23 @@ Unlike machines, where the movement are fixed, free weights allow to work in any
 
     <!-- http://www.semanticweb.org/fito#VBar -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/fito#VBar">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#VBar">
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#Attachment"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#DomainEntity"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#Equipment"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#VBar"/>
-    </owl:Class>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://www.semanticweb.org/fito#WeightDisk -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/fito#WeightDisk">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#WeightDisk">
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#DomainEntity"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#Equipment"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#FreeWeight"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#WeightDisk"/>
-    </owl:Class>
+    </owl:NamedIndividual>
     
 
 
