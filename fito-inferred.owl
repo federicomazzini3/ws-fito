@@ -11775,6 +11775,7 @@ Unlike machines, where the movement are fixed, free weights allow to work in any
         <fito:increaseResistanceOf rdf:resource="https://www.wikidata.org/wiki/Q196002"/>
         <fito:increaseResistanceOf rdf:resource="https://www.wikidata.org/wiki/Q504536"/>
         <fito:increaseResistanceOf rdf:resource="https://www.wikidata.org/wiki/Q637545"/>
+        <fito:isDoneWith rdf:resource="http://www.semanticweb.org/fito#Cyclette"/>
         <fito:trains rdf:resource="http://www.wikidata.org/wiki/Q3216080"/>
         <fito:trains rdf:resource="https://www.wikidata.org/wiki/Q196002"/>
         <fito:trains rdf:resource="https://www.wikidata.org/wiki/Q504536"/>

@@ -2719,6 +2719,7 @@ Unlike machines, where the movement are fixed, free weights allow to work in any
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fito#Bike_20_min">
         <rdf:type rdf:resource="http://www.semanticweb.org/fito#Bike"/>
+        <isDoneWith rdf:resource="http://www.semanticweb.org/fito#Cyclette"/>
         <hasDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</hasDuration>
     </owl:NamedIndividual>
     
